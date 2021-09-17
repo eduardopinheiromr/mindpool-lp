@@ -1,10 +1,10 @@
-import Header from "@components/Header";
+import Hero from "@components/sections/Hero";
+import Header from "@components/ui/Header";
 
 export default function Home() {
   return (
     <div>
-      <Header title="Teste" />
-      <h1>Simple Storybook Example</h1>
+      <Hero />
     </div>
   );
 }

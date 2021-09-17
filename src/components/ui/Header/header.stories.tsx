@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import Header, { HeaderProps } from "./";
+import Header, { HeaderProps } from ".";
 
 export default {
   title: "UI/Header",
