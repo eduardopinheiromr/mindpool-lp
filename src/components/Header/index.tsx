@@ -1,37 +1,44 @@
 import Link from "next/link";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
+import { navigationContent } from "src/i18n/shared/navigation";
 
 export type HeaderProps = {
   title: string;
 };
 
 export default function Header({ title }: HeaderProps) {
+  const { locale, asPath } = useRouter();
+
   const navigation = [
-    { label: "About", link: "#about" },
-    { label: "Posts", link: "#posts" },
-    { label: "Your Opinion", link: "#your-opinion" },
-    { label: "Newsletter", link: "#newsletter" },
+    { link: "#about" },
+    { link: "#posts" },
+    { link: "#your-opinion" },
+    { link: "#newsletter" },
   ];
+
+  const translations = [
+    { label: "EN", locale: "en" },
+    { label: "FR", locale: "fr" },
+    { label: "ES", locale: "es" },
+  ];
+
   return (
-    <header>
+    <header style={{ display: "flex", justifyContent: "space-between" }}>
       <h1>{title}</h1>
-      {navigation.map((nav, key) => (
-        <Link key={key} href={nav.link}>
-          {nav.label}
-        </Link>
-      ))}
-      {/* <Link href="/">
-        <a>{t("index")}</a>
-      </Link>
-      <Link href="/about">
-        <a>{t("about")}</a>
-      </Link>
-      <Link href="/" locale="en">
-        EN
-      </Link>
-      <Link href="/" locale="fr">
-        FR
-      </Link> */}
+      <nav>
+        {navigation.map((nav, key) => (
+          <Link key={key} href={nav.link}>
+            {navigationContent[locale][key].label}
+          </Link>
+        ))}
+      </nav>
+      <nav>
+        {translations.map((translation, key) => (
+          <Link key={key} href={asPath} locale={translation.locale}>
+            {translation.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
