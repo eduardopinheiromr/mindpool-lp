@@ -1,9 +1,25 @@
+import Link from "next/link";
 // import { useRouter } from "next/router";
-// import Link from "next/link";
 
-export default function Header() {
+export type HeaderProps = {
+  title: string;
+};
+
+export default function Header({ title }: HeaderProps) {
+  const navigation = [
+    { label: "About", link: "#about" },
+    { label: "Posts", link: "#posts" },
+    { label: "Your Opinion", link: "#your-opinion" },
+    { label: "Newsletter", link: "#newsletter" },
+  ];
   return (
-    <div>
+    <header>
+      <h1>{title}</h1>
+      {navigation.map((nav, key) => (
+        <Link key={key} href={nav.link}>
+          {nav.label}
+        </Link>
+      ))}
       {/* <Link href="/">
         <a>{t("index")}</a>
       </Link>
@@ -16,6 +32,6 @@ export default function Header() {
       <Link href="/" locale="fr">
         FR
       </Link> */}
-    </div>
+    </header>
   );
 }
