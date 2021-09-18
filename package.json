@@ -35,6 +35,7 @@
     "eslint-config-next": "11.1.2",
     "serve": "12.0.1",
     "storybook-addon-performance": "^0.16.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.4.3"
   }
 }
