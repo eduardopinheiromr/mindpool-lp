@@ -1,8 +1,10 @@
-import { Box } from "@chakra-ui/layout";
+import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
 import Header from "@components/ui/Header";
 import Image from "next/image";
 
 import heroImage from "@images/hero.png";
+import Container from "@components/layouts/Container";
+import Button from "@components/ui/Button";
 
 export default function Hero() {
   return (
@@ -18,6 +20,26 @@ export default function Hero() {
         />
       </Box>
       <Header />
+      <Container>
+        <Box maxWidth="590px" mt="min(10vh, 150px)">
+          <Heading as="h3" color="secondary" fontSize="24px">
+            Make your employees voice heard
+          </Heading>
+          <Heading as="h1" color="white" fontSize="56px">
+            Are you ready to know what your employees think?
+          </Heading>
+
+          <Flex style={{ gap: 20 }} my="33px">
+            <Button>Yes</Button>
+            <Button>No</Button>
+          </Flex>
+
+          <Text color="white" fontSize="18">
+            Employees can have awesome insights about your company, that not
+            even some specialist know. Why not gather that knowledge?
+          </Text>
+        </Box>
+      </Container>
     </Box>
   );
 }

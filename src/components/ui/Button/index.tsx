@@ -24,6 +24,11 @@ export default function Button({ children, lg }: ButtonProps) {
         color: "#084437",
         shadow: "0 0 10px #00FFBF",
       }}
+      _focus={{
+        filter: "brightness(1.3)",
+        color: "#084437",
+        shadow: "0 0 10px #00FFBF",
+      }}
       _active={{
         filter: "brightness(0.3)",
         color: "white",

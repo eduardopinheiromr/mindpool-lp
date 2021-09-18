@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import { useRouter } from "next/router";
 import { useDisclosure } from "@chakra-ui/hooks";
 import {
   Drawer,
@@ -13,11 +12,13 @@ import { MenuToggle } from "./MenuToggle";
 import { navigationContent } from "@i18n/shared/navigation";
 import { navigation } from "./constants";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Grid, Box, Stack } from "@chakra-ui/react";
+import { Grid, Box } from "@chakra-ui/react";
 import Button from "../Button";
 
+// Used for i18n, cancelled by errors with storybook
+// import { useRouter } from "next/router";
+// const { locale } = useRouter();
 export default function MobileMenu() {
-  // const { locale } = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
