@@ -8585,6 +8585,11 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
+next-router-mock@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.5.1.tgz#e52946718510a05e8755e2f0a69022d279cf8f40"
+  integrity sha512-rIIIiVAIBL6ZJjSkXUI5S2+7akLudpBqg9yegduUeXW1eo04m+u2J636/C1HnMr4Gtupj1RVQQFQVy5G6+dBOw==
+
 next@latest:
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/next/-/next-11.1.2.tgz#527475787a9a362f1bc916962b0c0655cc05bc91"

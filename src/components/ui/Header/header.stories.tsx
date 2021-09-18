@@ -1,19 +1,10 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import Header, { HeaderProps } from ".";
+import Header from ".";
 
 export default {
   title: "UI/Header",
   component: Header,
-  argTypes: {
-    title: {
-      control: { type: "text", default: "Teste" },
-    },
-  },
 } as Meta;
 
-export const header: Story<HeaderProps> = (args) => <Header {...args} />;
-
-header.args = {
-  title: "Teste",
-};
+export const header: Story = (args) => <Header {...args} />;

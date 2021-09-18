@@ -2,6 +2,12 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { StoryContext } from "@storybook/react";
 import * as React from "react";
 import { withPerformance } from "storybook-addon-performance";
+import * as nextImage from "next/image";
+
+Object.defineProperty(nextImage, "default", {
+  configurable: true,
+  value: (props) => <img {...props} />,
+});
 
 /**
  * Add global context for RTL-LTR switching
@@ -17,6 +23,20 @@ export const globalTypes = {
     },
   },
 };
+
+// locale: {
+//   name: "Locale",
+//   description: "Internationalization locale",
+//   defaultValue: "en",
+//   toolbar: {
+//     icon: "globe",
+//     items: [
+//       { value: "en", right: "🇺🇸", title: "English" },
+//       { value: "fr", right: "🇫🇷", title: "Français" },
+//       { value: "es", right: "🇪🇸", title: "Español" },
+//     ],
+//   },
+// },
 
 const withChakra = (StoryFn: Function, context: StoryContext) => {
   const { direction } = context.globals;

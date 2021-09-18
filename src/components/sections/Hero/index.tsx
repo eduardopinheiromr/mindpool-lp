@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import Header from "@components/ui/Header";
 import Image from "next/image";
 
@@ -6,8 +6,8 @@ import heroImage from "@images/hero.png";
 
 export default function Hero() {
   return (
-    <Flex position="relative" minH="100vh" direction="column">
-      <Box zIndex={-1}>
+    <Box position="relative" w="full">
+      <Box zIndex={-1} position="absolute" w="full" minH="900px">
         <Image
           src={heroImage}
           alt=""
@@ -18,6 +18,6 @@ export default function Hero() {
         />
       </Box>
       <Header />
-    </Flex>
+    </Box>
   );
 }

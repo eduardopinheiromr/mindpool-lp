@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@i18n/*": ["src/i18n/*"],
       "@config/*": ["src/config/*"],
       "@components/*": ["src/components/*"],
       "@images/*": ["public/images/*"]

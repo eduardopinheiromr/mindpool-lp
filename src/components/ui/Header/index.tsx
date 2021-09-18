@@ -1,24 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { Box, Flex } from "@chakra-ui/layout";
 
-import { navigationContent } from "src/i18n/shared/navigation";
+import { navigationContent } from "@i18n/shared/navigation";
 import { navigation } from "./constants";
 
 import logoImage from "@images/logo.svg";
 import MobileMenu from "./MobileMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
-
-export type HeaderProps = {
-  // title: string;
-};
+import Button from "../Button";
 
 export default function Header() {
-  const { locale } = useRouter();
-
   return (
-    <Box as="header" color="#fff">
+    <Box as="header" color="#fff" bgGradient="linear(to-b, black, transparent)">
       <Box
         as="nav"
         width="100%"
@@ -29,27 +23,54 @@ export default function Header() {
         flexDirection={["column", "column", "row"]}
         alignItems="center"
       >
-        <Flex align="center" w="full">
-          <Box p="10px 10px 0px" mr="auto">
-            <Image src={logoImage} alt="" />
-          </Box>
+        <Flex
+          w={["full", "full", "160px"]}
+          mr="20px"
+          align="center"
+          justify="space-between"
+        >
+          <Link href="/" passHref>
+            <Box as="a" mt="10px">
+              <Image src={logoImage} alt="" />
+            </Box>
+          </Link>
           <MobileMenu />
         </Flex>
+
         <Flex
-          direction={["column", "column", "row"]}
-          align="center"
-          justify={["center", "center", "space-between"]}
-          w="100%"
           d={["none", "none", "flex"]}
+          w="full"
+          style={{ gap: 20 }}
+          align="center"
         >
-          <Flex style={{ gap: 20 }} align="center">
-            {navigation.map((nav, key) => (
-              <Link key={key} href={nav.link}>
-                {navigationContent[locale][key].label}
-              </Link>
-            ))}
+          {navigation.map((nav, key) => (
+            <Link key={key} href={nav.link} passHref>
+              <Box
+                as="a"
+                whiteSpace="nowrap"
+                fontWeight="bold"
+                transition=".3s"
+                _hover={{ color: "secondary" }}
+              >
+                {navigationContent["en"][key].label}
+              </Box>
+            </Link>
+          ))}
+          <Flex w="full" justify="flex-end" align="center">
+            <LanguageSwitcher />
+            <Flex
+              ml="20px"
+              borderLeft="1px solid white"
+              p="0 20px"
+              fontWeight="bold"
+              whiteSpace="nowrap"
+              h="56px"
+              align="center"
+            >
+              Log in
+            </Flex>
+            <Button lg>Join now</Button>
           </Flex>
-          <LanguageSwitcher />
         </Flex>
       </Box>
     </Box>
