@@ -8,7 +8,7 @@ export const FirstPost = ({ post }) => {
   const imageSrc = getPostImageSrc(post.id, 472, 900);
   return (
     <Box>
-      <Box position="relative" w="full" maxH={["300", "300", "300", "472"]}>
+      <Box position="relative" w="full" h={["300", "300", "300", "472"]}>
         <Image
           src={imageSrc}
           alt={post.title}
