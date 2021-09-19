@@ -1,9 +1,7 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
 import Container from "@components/layouts/Container";
 
-import { FirstPost } from "./FirstPost";
-import { SecondPost } from "./SecondPost";
-import { ThirdPost } from "./ThirdPost";
+import { FirstPost, SecondPost, ThirdPost } from "./HomePosts";
 
 type Props = {
   posts: TPostWithLikes[];
@@ -11,20 +9,28 @@ type Props = {
 
 export default function Posts({ posts }: Props) {
   return (
-    <Box bg="light">
+    <Box bg="light" p="53px 0 58px" id="posts">
       <Container>
         <Heading
           as="h5"
           color="gray"
           fontSize="16px"
           textAlign="center"
-          m="53px 0 30px"
+          mb="30px"
         >
           BLOG POSTS
         </Heading>
-        <FirstPost key={posts[0].id} post={posts[0]} />
-        <SecondPost key={posts[1].id} post={posts[1]} />
-        <ThirdPost key={posts[2].id} post={posts[2]} />
+        <Flex
+          style={{ gap: 30 }}
+          minH={["660px"]}
+          direction={["column", "column", "column", "row"]}
+        >
+          <FirstPost key={posts[0].id} post={posts[0]} />
+          <Flex style={{ gap: 30 }} direction="column" h="full">
+            <SecondPost key={posts[1].id} post={posts[1]} />
+            <ThirdPost key={posts[2].id} post={posts[2]} />
+          </Flex>
+        </Flex>
       </Container>
     </Box>
   );
