@@ -1,13 +1,11 @@
-# <a href="https://mindpool-lp.vercel.app" target="_blank">DEMO ONLINE</a>
-
-# <a href="https://6147c00b149a1b003a2cad0a-oyxrqimiyy.chromatic.com" target="_blank">StoryBook</a>
-
 # **Mindpool Landing Page**
+
+## <a href="https://mindpool-lp.vercel.app" target="_blank">DEMO ONLINE</a>
+
+## <a href="https://6147c00b149a1b003a2cad0a-oyxrqimiyy.chromatic.com" target="_blank">StoryBook</a>
 
 <br/>
 <img src="./docs/cover.png">
-<br/>
-<br/>
 
 # **How to run local**
 
@@ -23,4 +21,4 @@ Then, open in your browser http://localhost:3000/
 
 # **Used Technologies**
 
-## Next.js | Chakra UI | TypeScript | StoryBook
+Next.js | Chakra UI | TypeScript | StoryBook

@@ -8,7 +8,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s public/",
     "serve-storybook": "serve storybook-static",
-    "quickstart": "yarn && yarn build && yarn start"
+    "create-env": "mv .env.example .env",
+    "quickstart": "yarn create-env && yarn && yarn build && yarn start"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.7",
