@@ -54,7 +54,7 @@ export default function Footer() {
             />
             <Button>Subscribe</Button>
           </Flex>
-          <Flex style={{ gap: 20 }}>
+          <Flex style={{ gap: 20 }} justify="flex-end">
             {termsAndPolicies.map((page, key) => (
               <Link href={page.link} passHref key={key}>
                 <Text
