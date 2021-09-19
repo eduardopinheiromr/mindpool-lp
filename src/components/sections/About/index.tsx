@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import earthImage from "@images/countries.png";
-import { MotionBox } from "@components/layouts/MotionBox";
+import { LazyMotionBox } from "@components/layouts/MotionBox";
+import Selector from "@components/ui/Select";
 import AnimateOnScreen from "@components/layouts/AnimateOnScreen";
+import { countries } from "./constants";
 
 export default function About() {
   return (
@@ -58,30 +60,43 @@ export default function About() {
             </Box>
           </Link>
         </Flex>
-        <AnimateOnScreen>
-          <MotionBox
-            position="relative"
-            mt={["40px", "40px", "0"]}
-            minH="280px"
-            w="full"
-            transition={{
-              duration: 0.2,
-              repeat: 2,
-              repeatType: "loop",
-            }}
-            animate={{
-              opacity: ["0", "1"],
-              filter: ["brightness(1)", "brightness(.5)", "brightness(1)"],
-            }}
+        <Flex direction="column" w="full" h="full">
+          <Box
+            w={["300px", "340px", "370px"]}
+            boxShadow="0px 10px 20px rgba(0, 0, 0, 0.1)"
+            borderRadius="5px"
+            m={["20px auto 0px", "20px auto 0", "0 auto 53px"]}
+            fontSize={["12px", "15px", "15px"]}
           >
-            <Image
-              draggable={false}
-              src={earthImage}
-              alt=""
-              layout="responsive"
+            <Selector
+              placeholder="Select where you are located at"
+              options={countries}
             />
-          </MotionBox>
-        </AnimateOnScreen>
+          </Box>
+          <AnimateOnScreen>
+            <LazyMotionBox
+              position="relative"
+              mt={["40px", "40px", "0"]}
+              minH="280px"
+              w="full"
+              transition={{
+                duration: 2,
+                repeat: 1,
+                repeatType: "loop",
+              }}
+              animate={{
+                filter: ["brightness(1.2)", "brightness(1)"],
+              }}
+            >
+              <Image
+                draggable={false}
+                src={earthImage}
+                alt=""
+                layout="responsive"
+              />
+            </LazyMotionBox>
+          </AnimateOnScreen>
+        </Flex>
       </Flex>
     </Container>
   );
