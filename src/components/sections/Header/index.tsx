@@ -1,15 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Flex } from "@chakra-ui/layout";
-
-import { navigationContent } from "@i18n/shared/navigation";
-import { navigation } from "./constants";
-
-import logoImage from "@images/logo.svg";
+import { Container } from "@components/layouts";
+import { Button } from "@components/ui";
 import MobileMenu from "./MobileMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
-import Button from "../../ui/Button";
-import Container from "@components/layouts/Container";
+
+import logoImage from "@images/logo.svg";
+import { navigationContent } from "@i18n/shared/navigation";
+import { navigation } from "./constants";
 
 export default function Header() {
   return (
@@ -35,7 +34,7 @@ export default function Header() {
         >
           <Link href="/" passHref>
             <Box as="a" mt="10px">
-              <Image src={logoImage} alt="" />
+              <Image src={logoImage} alt="Mindpool Logo" />
             </Box>
           </Link>
           <MobileMenu />

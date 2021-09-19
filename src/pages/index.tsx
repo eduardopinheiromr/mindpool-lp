@@ -1,11 +1,8 @@
-import PageLayout from "@components/layouts/PageLayout";
-import About from "@components/sections/About";
-import Hero from "@components/sections/Hero";
-import Posts from "@components/sections/Posts";
-import YourOpinion from "@components/sections/YourOpinion";
+import PageTags from "@components/PageTags";
+import { PageLayout } from "@components/layouts";
+import { About, Hero, Posts, YourOpinion } from "@components/sections";
 
 import { getPostsWithLikes } from "@services";
-import PageTags from "@components/PageTags";
 
 type Props = {
   posts: TPostWithLikes[];

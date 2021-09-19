@@ -1,7 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/layout";
-import Container from "@components/layouts/Container";
-import Button from "@components/ui/Button";
-import React from "react";
+import { Container } from "@components/layouts";
+import { Button } from "@components/ui";
 
 export default function YourOpinion() {
   return (

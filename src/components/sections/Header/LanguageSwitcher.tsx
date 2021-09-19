@@ -1,5 +1,6 @@
-import { Grid } from "@chakra-ui/layout";
 import Link from "next/link";
+import { Grid } from "@chakra-ui/layout";
+
 import { translations } from "./constants";
 
 // Used for i18n, cancelled by errors with storybook

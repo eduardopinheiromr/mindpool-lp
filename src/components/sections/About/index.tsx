@@ -1,13 +1,10 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import Container from "@components/layouts/Container";
-import Button from "@components/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
+import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
+import { Container, LazyMotionBox, AnimateOnScreen } from "@components/layouts";
+import { Button, Selector } from "@components/ui";
 
 import earthImage from "@images/countries.png";
-import { LazyMotionBox } from "@components/layouts/MotionBox";
-import Selector from "@components/ui/Selector";
-import AnimateOnScreen from "@components/layouts/AnimateOnScreen";
 import { countries } from "./constants";
 
 export default function About() {
@@ -90,8 +87,9 @@ export default function About() {
             >
               <Image
                 draggable={false}
+                placeholder="blur"
                 src={earthImage}
-                alt=""
+                alt="World map"
                 layout="responsive"
               />
             </LazyMotionBox>

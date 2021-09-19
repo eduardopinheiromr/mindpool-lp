@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Box, Flex, Text } from "@chakra-ui/layout";
+
 import { capitalize, getPostImageSrc } from "@utils";
 import { FcLikePlaceholder as LikeIcon } from "react-icons/fc";
 import { BsArrowRight as ReadMoreIcon } from "react-icons/bs";
@@ -14,6 +15,7 @@ export const FirstPost = ({ post }) => {
           alt={post.title}
           layout="fill"
           objectFit="cover"
+          draggable={false}
         />
       </Box>
       <Box bg="white" p="16px 45px 0">
@@ -71,6 +73,7 @@ export const SecondPost = ({ post }) => {
           alt={post.title}
           layout="fill"
           objectFit="cover"
+          draggable={false}
         />
       </Box>
     </Flex>
@@ -87,6 +90,7 @@ export const ThirdPost = ({ post }) => {
           alt={post.title}
           layout="fill"
           objectFit="cover"
+          draggable={false}
         />
       </Box>
       <Flex

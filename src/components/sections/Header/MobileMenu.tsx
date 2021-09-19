@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useDisclosure } from "@chakra-ui/hooks";
 import {
   Drawer,
   DrawerBody,
@@ -7,13 +6,14 @@ import {
   DrawerHeader,
   DrawerOverlay,
 } from "@chakra-ui/modal";
-import { MenuToggle } from "./MenuToggle";
+import { Grid, Box } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/hooks";
+import { Button } from "@components/ui";
+import LanguageSwitcher from "./LanguageSwitcher";
+import MenuToggle from "./MenuToggle";
 
 import { navigationContent } from "@i18n/shared/navigation";
 import { navigation } from "./constants";
-import LanguageSwitcher from "./LanguageSwitcher";
-import { Grid, Box } from "@chakra-ui/react";
-import Button from "../../ui/Button";
 
 // Used for i18n, cancelled by errors with storybook
 // import { useRouter } from "next/router";

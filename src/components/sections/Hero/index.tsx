@@ -1,9 +1,9 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
 import Image from "next/image";
+import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
+import { Container } from "@components/layouts";
+import { Button } from "@components/ui";
 
 import heroImage from "@images/hero.png";
-import Container from "@components/layouts/Container";
-import Button from "@components/ui/Button";
 
 export default function Hero() {
   return (
@@ -16,6 +16,7 @@ export default function Hero() {
           objectFit="cover"
           objectPosition="right"
           placeholder="blur"
+          draggable={false}
         />
       </Box>
       <Container>

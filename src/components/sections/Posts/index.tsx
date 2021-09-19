@@ -1,6 +1,5 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import Container from "@components/layouts/Container";
-
+import { Box, Flex, Heading } from "@chakra-ui/layout";
+import { Container } from "@components/layouts";
 import { FirstPost, SecondPost, ThirdPost } from "./HomePosts";
 
 export type PostsProps = {

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoImage from "@images/logo-footer.svg";
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import Container from "@components/layouts/Container";
 import { Input } from "@chakra-ui/input";
-import Button from "@components/ui/Button";
+import { Container } from "@components/layouts";
+import { Button } from "@components/ui";
+
+import logoImage from "@images/logo-footer.svg";
 
 export default function Footer() {
   const termsAndPolicies = [
@@ -21,7 +22,7 @@ export default function Footer() {
       >
         <Link href="#" passHref>
           <Box as="a" pt={["50px", "0"]}>
-            <Image src={logoImage} alt="Mindpool logo" />
+            <Image draggable={false} src={logoImage} alt="Mindpool logo" />
           </Box>
         </Link>
         <Flex
