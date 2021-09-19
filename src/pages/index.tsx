@@ -1,16 +1,37 @@
-import Header from "@components/Header";
+import PageTags from "@components/PageTags";
+import { PageLayout } from "@components/layouts";
+import { About, Hero, Posts, YourOpinion } from "@components/sections";
 
-export default function Home() {
+import { getPostsWithLikes } from "@services";
+
+type Props = {
+  posts: TPostWithLikes[];
+};
+
+const pageTagsProps = {
+  title: "Mindpool | Smarter together",
+  description:
+    "Championing the transition to a collective intelligence mindset. Mindpool is a business intelligence platform that crowdsources employee predictions and actions that you can take to improve your companies future.",
+};
+
+export default function Home({ posts }: Props) {
   return (
-    <div>
-      <Header title="Teste" />
-      <h1>Simple Storybook Example</h1>
-    </div>
+    <PageLayout>
+      <PageTags {...pageTagsProps} />
+      <Hero />
+      <About />
+      <Posts posts={posts} />
+      <YourOpinion />
+    </PageLayout>
   );
 }
 
-export const getStaticProps = async (context) => {
+export async function getStaticProps() {
+  const posts = await getPostsWithLikes(3);
+
   return {
-    props: { context },
+    props: {
+      posts,
+    },
   };
-};
+}

@@ -15,6 +15,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@utils": ["src/utils/index"],
+      "@services": ["src/services/index"],
+      "@mocks/*": ["src/mocks/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@i18n/*": ["src/i18n/*"],
       "@config/*": ["src/config/*"],
       "@components/*": ["src/components/*"],
       "@images/*": ["public/images/*"]
