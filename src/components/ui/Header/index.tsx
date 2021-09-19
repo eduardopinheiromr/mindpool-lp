@@ -73,7 +73,7 @@ export default function Header() {
             >
               Log in
             </Flex>
-            <Button lg>Join now</Button>
+            <Button h="59px">Join now</Button>
           </Flex>
         </Flex>
       </Container>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import earthImage from "@images/countries.png";
 import { LazyMotionBox } from "@components/layouts/MotionBox";
-import Selector from "@components/ui/Select";
+import Selector from "@components/ui/Selector";
 import AnimateOnScreen from "@components/layouts/AnimateOnScreen";
 import { countries } from "./constants";
 

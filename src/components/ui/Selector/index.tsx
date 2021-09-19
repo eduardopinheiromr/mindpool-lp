@@ -6,6 +6,7 @@ const customStyles = {
     height: 48,
     border: 0,
     boxShadow: "none",
+    cursor: "pointer",
   }),
   placeholder: (provided) => ({
     ...provided,
@@ -16,6 +17,7 @@ const customStyles = {
     color: "#1C987D",
     background: state.isSelected ? "#35f5cb" : "white",
     padding: 15,
+    cursor: "pointer",
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;

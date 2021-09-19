@@ -2,7 +2,6 @@ import { Box, BoxProps } from "@chakra-ui/layout";
 
 export type ButtonProps = {
   children: string;
-  lg?: boolean;
   onClick?: () => void;
 } & BoxProps;
 
@@ -11,7 +10,7 @@ export default function Button(props: ButtonProps) {
     <Box
       {...props}
       as={props.as ?? "button"}
-      h={props.lg ? "59px" : "49px"}
+      h={props.h ?? "49px"}
       minW="131px"
       p="10px 18px"
       bg="linear-gradient(135deg, #00FFBF 0%, #31D8B3 33.33%, #1C987D 100%)"
