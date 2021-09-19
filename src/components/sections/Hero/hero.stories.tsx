@@ -8,7 +8,3 @@ export default {
 } as Meta;
 
 export const hero: Story = (args) => <Hero {...args} />;
-
-// hero.args = {
-//   label: "Click me",
-// };

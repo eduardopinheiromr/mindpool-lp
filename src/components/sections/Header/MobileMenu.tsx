@@ -13,7 +13,7 @@ import { navigationContent } from "@i18n/shared/navigation";
 import { navigation } from "./constants";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Grid, Box } from "@chakra-ui/react";
-import Button from "../Button";
+import Button from "../../ui/Button";
 
 // Used for i18n, cancelled by errors with storybook
 // import { useRouter } from "next/router";

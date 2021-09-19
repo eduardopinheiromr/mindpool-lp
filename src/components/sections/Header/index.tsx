@@ -8,7 +8,7 @@ import { navigation } from "./constants";
 import logoImage from "@images/logo.svg";
 import MobileMenu from "./MobileMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
-import Button from "../Button";
+import Button from "../../ui/Button";
 import Container from "@components/layouts/Container";
 
 export default function Header() {

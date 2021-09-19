@@ -27,7 +27,12 @@ const customStyles = {
   },
 };
 
-export default function Selector({ options, placeholder }) {
+export type SelectorProps = {
+  options: { value: string; label: string }[];
+  placeholder: string;
+};
+
+export default function Selector({ options, placeholder }: SelectorProps) {
   return (
     <Select styles={customStyles} placeholder={placeholder} options={options} />
   );

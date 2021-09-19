@@ -3,11 +3,11 @@ import Container from "@components/layouts/Container";
 
 import { FirstPost, SecondPost, ThirdPost } from "./HomePosts";
 
-type Props = {
+export type PostsProps = {
   posts: TPostWithLikes[];
 };
 
-export default function Posts({ posts }: Props) {
+export default function Posts({ posts }: PostsProps) {
   return (
     <Box bg="light" p="53px 0 58px" id="posts">
       <Container>

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Header from "@components/ui/Header";
+import Header from "@components/sections/Header";
 
 type PageLayoutProps = {
   children: ReactNode;

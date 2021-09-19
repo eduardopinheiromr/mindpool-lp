@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import Header from "@components/ui/Header";
 import Image from "next/image";
 
 import heroImage from "@images/hero.png";
