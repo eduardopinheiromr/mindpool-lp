@@ -9,16 +9,20 @@ import logoImage from "@images/logo.svg";
 import MobileMenu from "./MobileMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Button from "../Button";
+import Container from "@components/layouts/Container";
 
 export default function Header() {
   return (
-    <Box as="header" color="#fff" bgGradient="linear(to-b, black, transparent)">
-      <Box
+    <Box
+      as="header"
+      color="#fff"
+      bgGradient="linear(to-b, black, transparent)"
+      position="absolute"
+      w="full"
+      zIndex="10"
+    >
+      <Container
         as="nav"
-        width="100%"
-        maxWidth="1000px"
-        margin="0 auto"
-        padding="15px"
         d="flex"
         flexDirection={["column", "column", "row"]}
         alignItems="center"
@@ -72,7 +76,7 @@ export default function Header() {
             <Button lg>Join now</Button>
           </Flex>
         </Flex>
-      </Box>
+      </Container>
     </Box>
   );
 }

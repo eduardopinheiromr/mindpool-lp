@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@hooks/*": ["src/hooks/*"],
       "@i18n/*": ["src/i18n/*"],
       "@config/*": ["src/config/*"],
       "@components/*": ["src/components/*"],

@@ -1,16 +1,12 @@
+import PageLayout from "@components/layouts/PageLayout";
+import About from "@components/sections/About";
 import Hero from "@components/sections/Hero";
-import Header from "@components/ui/Header";
 
 export default function Home() {
   return (
-    <div>
+    <PageLayout>
       <Hero />
-    </div>
+      <About />
+    </PageLayout>
   );
 }
-
-export const getStaticProps = async (context) => {
-  return {
-    props: { context },
-  };
-};

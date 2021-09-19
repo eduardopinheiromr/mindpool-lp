@@ -8,7 +8,7 @@ import Button from "@components/ui/Button";
 
 export default function Hero() {
   return (
-    <Box position="relative" w="full">
+    <Box position="relative" w="full" minH="900px">
       <Box zIndex={-1} position="absolute" w="full" minH="900px">
         <Image
           src={heroImage}
@@ -19,9 +19,8 @@ export default function Hero() {
           placeholder="blur"
         />
       </Box>
-      <Header />
       <Container>
-        <Box maxWidth="590px" mt="min(10vh, 150px)">
+        <Box maxWidth="590px" mt="160px">
           <Heading as="h3" color="secondary" fontSize="24px">
             Make your employees voice heard
           </Heading>
