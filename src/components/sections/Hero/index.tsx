@@ -20,15 +20,24 @@ export default function Hero() {
         />
       </Box>
       <Container>
-        <Box maxWidth="590px" mt="160px">
+        <Box
+          maxWidth="590px"
+          mt="160px"
+          mx={["auto", "auto", "0"]}
+          textAlign={["center", "center", "left"]}
+        >
           <Heading as="h3" color="secondary" fontSize="24px">
             Make your employees voice heard
           </Heading>
-          <Heading as="h1" color="white" fontSize="56px">
+          <Heading as="h1" color="white" fontSize={["36px", "42px", "56px"]}>
             Are you ready to know what your employees think?
           </Heading>
 
-          <Flex style={{ gap: 20 }} my="33px">
+          <Flex
+            style={{ gap: 20 }}
+            my="33px"
+            justify={["center", "center", "flex-start"]}
+          >
             <Button>Yes</Button>
             <Button>No</Button>
           </Flex>

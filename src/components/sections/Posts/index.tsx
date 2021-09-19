@@ -1,8 +1,15 @@
-import { Box, Heading } from "@chakra-ui/layout";
+import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
 import Container from "@components/layouts/Container";
-import React from "react";
 
-export default function Posts() {
+import { FirstPost } from "./FirstPost";
+import { SecondPost } from "./SecondPost";
+import { ThirdPost } from "./ThirdPost";
+
+type Props = {
+  posts: TPostWithLikes[];
+};
+
+export default function Posts({ posts }: Props) {
   return (
     <Box bg="light">
       <Container>
@@ -15,6 +22,9 @@ export default function Posts() {
         >
           BLOG POSTS
         </Heading>
+        <FirstPost key={posts[0].id} post={posts[0]} />
+        <SecondPost key={posts[1].id} post={posts[1]} />
+        <ThirdPost key={posts[2].id} post={posts[2]} />
       </Container>
     </Box>
   );
