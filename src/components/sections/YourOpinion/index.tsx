@@ -22,7 +22,7 @@ export default function YourOpinion() {
 
           <Flex style={{ gap: 20 }} justify="center" align="center" my="20px">
             <Button>Yes</Button>
-            <Button>No</Button>
+            <Button danger>No</Button>
           </Flex>
         </Box>
       </Container>

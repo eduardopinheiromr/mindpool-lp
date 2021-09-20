@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 export default function AnimateOnScreen({ children }) {
   const componentRef = useRef(null);
-  const isVisible = useOnScreen(componentRef, "-100px");
+  const isVisible = useOnScreen(componentRef, "0px");
 
   return (
     <Box w="full" h="full" ref={componentRef}>

@@ -1,5 +1,5 @@
 import { Box, Flex, Heading } from "@chakra-ui/layout";
-import { Container } from "@components/layouts";
+import { AnimateOnScreen, Container, LazyMotionBox } from "@components/layouts";
 import { FirstPost, SecondPost, ThirdPost } from "./HomePosts";
 
 export type PostsProps = {
@@ -8,7 +8,7 @@ export type PostsProps = {
 
 export default function Posts({ posts }: PostsProps) {
   return (
-    <Box bg="light" p="53px 0 58px" id="posts">
+    <Box bg="light" p="53px 0 58px" id="posts" overflowX="hidden">
       <Container>
         <Heading
           as="h5"

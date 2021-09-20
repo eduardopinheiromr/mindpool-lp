@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import { Container, LazyMotionBox, AnimateOnScreen } from "@components/layouts";
+import { Container, LazyMotionBox } from "@components/layouts";
 import { Button, Selector } from "@components/ui";
 
 import earthImage from "@images/countries.png";
@@ -38,6 +38,7 @@ export default function About() {
             text ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type specimen book.
           </Text>
+
           <Button my="20px" mx={["auto", "auto", "0"]} w="fit-content">
             Make your voice heard
           </Button>
@@ -57,6 +58,7 @@ export default function About() {
             </Box>
           </Link>
         </Flex>
+
         <Flex direction="column" w="full" h="full">
           <Box
             w={["300px", "340px", "370px"]}
@@ -70,30 +72,29 @@ export default function About() {
               options={countries}
             />
           </Box>
-          <AnimateOnScreen>
-            <LazyMotionBox
-              position="relative"
-              mt={["40px", "40px", "0"]}
-              minH="280px"
-              w="full"
-              transition={{
-                duration: 2,
-                repeat: 1,
-                repeatType: "loop",
-              }}
-              animate={{
-                filter: ["brightness(1.2)", "brightness(1)"],
-              }}
-            >
-              <Image
-                draggable={false}
-                placeholder="blur"
-                src={earthImage}
-                alt="World map"
-                layout="responsive"
-              />
-            </LazyMotionBox>
-          </AnimateOnScreen>
+
+          <LazyMotionBox
+            position="relative"
+            mt={["40px", "40px", "0"]}
+            minH="280px"
+            w="full"
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            animate={{
+              filter: ["brightness(1.2)", "brightness(0.9)", "brightness(1.2)"],
+            }}
+          >
+            <Image
+              draggable={false}
+              placeholder="blur"
+              src={earthImage}
+              alt="World map"
+              layout="responsive"
+            />
+          </LazyMotionBox>
         </Flex>
       </Flex>
     </Container>
